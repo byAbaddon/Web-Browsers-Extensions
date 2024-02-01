@@ -1,2 +1,4 @@
-# Web-Extension-
-Web Extension for Browsers
+# Web-Browsers-Extensions
+### Extensions working with [Manifest 3]
+
+1)
