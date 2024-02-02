@@ -3,7 +3,7 @@
 
 ## 1)  WAB
 ```diff
- Web Ad Bloker
+! Web Ad Bloker
 ! Ad blocking browser extension
 ```
 - 
