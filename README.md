@@ -1,4 +1,8 @@
 # Web-Browsers-Extensions
-### Extensions working with [Manifest 3]
+### Extensions based on [Manifest 3]
 
-1)
+## 1)  WAB
+```diff
+! Ad blocking browser extension
+```
+- 
