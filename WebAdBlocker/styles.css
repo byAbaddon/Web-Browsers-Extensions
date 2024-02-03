@@ -1,0 +1,73 @@
+body {
+    background: coral;
+    width: 200px;
+    height: 100px;
+}
+
+
+@keyframes burningText {
+    0% {
+      text-shadow: 0 0 10px #ffff50, 0 0 20px #ffff00, 0 0 30px #ffff00;
+    }
+    50% {
+      text-shadow: 0 0 5px #ffff00, 0 0 15px #ffff00, 0 0 25px #ffff00;
+    }
+    100% {
+      text-shadow: 0 0 10px #ffff00, 0 0 20px #ffff00, 0 0 30px #ffff00;
+    }
+  }
+  
+h2 {
+    text-align: center;
+    text-decoration-line: underline;
+    margin-top: 0;
+    color: #FF4500;
+    font-weight: bold; 
+    animation: burningText 2s infinite;
+}
+div {
+    /* width: 180px; */
+    height: 65px;
+    background: rgb(43, 53, 53);
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+
+button {
+    width: 80px;
+    height: 30px;
+    margin-top: 8px;
+    border-style: none;
+    border-radius: 4px;
+    background-color: rgb(175, 20, 54);
+    color: rgb(196, 195, 201);
+    text-shadow:5px;
+    font-weight: bold;
+}
+
+
+.btn-enable{
+    margin-right: 10px;
+    background: green;
+    color: white; 
+}
+
+
+
+
+.btn:hover {
+    cursor: pointer;
+    color:rgb(237, 240, 78);
+}
+
+
+p {
+    color:bisque;
+}
+
+span {
+    color: cyan;
+}
