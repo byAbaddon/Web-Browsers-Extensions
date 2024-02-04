@@ -7,4 +7,4 @@
 ! Ad blocking browser extension
 ! Blocking Websites: Web Ad Blocker (WAB) allows you to block unwanted and intrusive ads on specific websites.
 ```
-- 
+## 2)
