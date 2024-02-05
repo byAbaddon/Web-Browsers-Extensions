@@ -1,14 +1,56 @@
 body {
-  background: coral;
+  background-color:rgba(255, 127, 80, 0.9);
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   margin: 0;
 }
 
-section {
+
+header {
+  margin-top: 0;
+  background-color: rgba(51, 51, 51, 0.9);
+  color: white;
+  padding: 15px;
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo{
+  width: 30px;
+  height: 30px;
+}
+
+
+
+header h1 {
+  margin-left: 5em;
+  margin-top: 4px;
+
+}
+
+header p {
+  margin: 5px 0 0;
+}
+
+
+
+
+section {
+  margin: 5em auto;
+  text-align: center;
+ 
+}
+
+article {
+  max-width: 65%; 
+  text-align:justify;
+}
+
+article  h3{
+  text-decoration: underline;
+  text-shadow: 1px 1px wheat;
 }
 
 img {
@@ -16,3 +58,29 @@ img {
   height: auto; 
 }
 
+
+.settings {
+  border: 4px red dotted;
+ max-width: 40%;
+ padding: 10px;
+ margin: 3em auto;
+}
+
+.settings h2 {
+  font-size: bold;
+  color: red;
+}
+
+footer {
+  background-color: rgba(51, 51, 51);
+  color: white; 
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
