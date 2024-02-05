@@ -1,5 +1,5 @@
 # Web-Browsers-Extensions
-### Extensions for Chromium family, based on [Manifest 3] 
+#### Extensions for Chromium family, based on [Manifest 3] 
 
 ## 1)  WAB
 
