@@ -18,17 +18,17 @@ soon
 
 ## Screenshots:
 ![WAB1](https://github.com/byAbaddon/Web-Browsers-Extensions/assets/51271834/97d4ad8d-010e-4558-baae-99315cea5735)
-![wab2](https://github.com/byAbaddon/Web-Browsers-Extensions/assets/51271834/4c9396c8-a673-42b8-9ee8-7f52459e244a)
+![wab2](https://github.com/byAbaddon/Web-Browsers-Extensions/assets/51271834/6b74ab52-a77e-44e3-bde3-884593cf147d)
 ![WAB3](https://github.com/byAbaddon/Web-Browsers-Extensions/assets/51271834/dc0de3b1-7a00-4cf6-8be5-8570a114921f)
 
 
-## 2)
-# Phaser_Game_Tic_Tac_Toe_for_phone
+## 2) NEW APP Soon
+
 
 
 
 ## Install and Test
-The process for installing and testing a browser extension varies depending on the browser you are using. Here are general steps for some popular browsers:
+- The process for installing and testing a browser extension varies depending on the browser you are using. Here are general steps for some popular browsers:
 - Open you Browser:
 - Go to the Extensions page by either:
 - Clicking on the options and, selecting "More tools," and then choosing "Extensions.
@@ -36,9 +36,10 @@ The process for installing and testing a browser extension varies depending on t
 - Click on the "Load unpacked" button.
 - Select the folder containing your extension files and click "Select Folder.
 
-# --------------------------------------------------------------
+#### --------------------------------------------------------------
+
 #### Year:
-2023
+2024
 
 ### Developer
 By Abaddon
