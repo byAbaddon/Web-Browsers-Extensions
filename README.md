@@ -1,7 +1,7 @@
 # Web-Browsers-Extensions
 #### Extensions for Chromium family, based on [Manifest 3] 
 
-## 1)  WAB
+## 1)  --------------------------------------- WAB --------------------------------------------------------
 
 ### Created a project using:
 + JS / HTML / CSS
@@ -22,7 +22,7 @@ soon
 ![WAB3](https://github.com/byAbaddon/Web-Browsers-Extensions/assets/51271834/dc0de3b1-7a00-4cf6-8be5-8570a114921f)
 
 
-## 2) BG Radio Stations
+## 2) --------------------------------------- BG Radio Stations --------------------------------------------------------
 ## Created a project using:
 + JS / HTML / CSS
 + consultant assistance ChatGPT
