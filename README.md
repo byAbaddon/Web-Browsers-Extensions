@@ -10,7 +10,7 @@
 ```diff
 ! Name: Web Ad Bloker (WAB)
 ! Ad blocking browser extension
-! Blocking Websites: Web Ad Blocker (WAB) allows you to block unwanted and intrusive ads on specific websites.
+! Usage: Web Ad Blocker (WAB) allows you to block unwanted and intrusive ads on specific websites.
 ```
 
 ## Short video intro:
@@ -23,7 +23,15 @@ soon
 
 
 ## 2) BG Radio Stations
+## Created a project using:
++ JS / HTML / CSS
++ consultant assistance ChatGPT
 
+```diff
+! Name: BG Radio Stations (BRS)
+! BG Radio Stations browser extension
+! Usage : Listening to some of the most popular Bulgarian radio stations.
+```
 
 
 ## 3) Soon
