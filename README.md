@@ -33,6 +33,11 @@ soon
 ! BG Radio Stations browser extension
 ! Usage : Listening to some of the most popular Bulgarian radio stations.
 ```
+Short video intro:
+soon
+
+Screenshots:
+![1](https://github.com/byAbaddon/Web-Browsers-Extensions/assets/51271834/4cb881c1-fe2c-4f22-ae73-e6a279b90145)
 
 
 ## 3) Soon
