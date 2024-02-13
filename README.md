@@ -42,8 +42,7 @@ soon
 ![2](https://github.com/byAbaddon/Web-Browsers-Extensions/assets/51271834/16563bf6-f896-4775-b6a2-b748f69db253)
 ![3](https://github.com/byAbaddon/Web-Browsers-Extensions/assets/51271834/214a3bb4-f5ab-4ba2-835f-4e18a699877c)
 ![4](https://github.com/byAbaddon/Web-Browsers-Extensions/assets/51271834/4b19fbbc-280c-46c2-a51c-b6b075fe422c)
-![5](https://github.com/byAbaddon/Web-Browsers-Extensions/assets/51271834/79e2b4fc-44ee-4bb7-b227-3abbad7f2569)
-
+![5](https://github.com/byAbaddon/Web-Browsers-Extensions/assets/51271834/bd7f26eb-97dd-44b3-8988-861a82be5edb)
 
 ## 3) Soon
 
