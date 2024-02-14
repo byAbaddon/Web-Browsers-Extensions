@@ -8,9 +8,9 @@
 + consultant assistance ChatGPT
 
 ```diff
-! Name: Web Ad Bloker (WAB)
-! Ad blocking browser extension
-! Usage: Web Ad Blocker (WAB) allows you to block unwanted and intrusive ads on specific websites.
++ Name: Web Ad Bloker (WAB)
+# Ad blocking browser extension
+# Usage: Web Ad Blocker (WAB) allows you to block unwanted and intrusive ads on specific websites.
 ```
 
 ## Short video intro:
@@ -30,9 +30,9 @@ soon
 + consultant assistance ChatGPT
 
 ```diff
-! Name: BG Radio Stations (BRS)
-! BG Radio Stations browser extension
-! Usage : Listening to some of the most popular Bulgarian radio stations.
++ Name: BG Radio Stations (BRS)
+# BG Radio Stations browser extension
+# Usage : Listening to some of the most popular Bulgarian radio stations.
 ```
 ## Short video intro:
 soon
