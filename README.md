@@ -38,7 +38,7 @@ soon
 - WARNING
 - Play Audio in Background service worker not possible!
 - Background sound service is currently unavailable, in Manifest 3 - 02/14/2024
-
+```
 
 ## Short video intro:
 soon
