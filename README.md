@@ -14,7 +14,7 @@
 ```
 
 ## Short video intro:
-soon
+[soon](https://youtu.be/o05VvyFG7Wk)
 
 ## Screenshots:
 ![WAB3](https://github.com/byAbaddon/Web-Browsers-Extensions/assets/51271834/dc0de3b1-7a00-4cf6-8be5-8570a114921f)
