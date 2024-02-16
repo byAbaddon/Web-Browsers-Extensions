@@ -1,0 +1,26 @@
+
+**************************[  not used in this project  ]*********************
+
+1)
+ npm install firebase
+
+--------------- Data settings ready to use in folder service -----------------
+- sdk.js
+- loadData.js
+
+
+
+-------------- For import must add type  "module" ---------------------------
+
+--- (html) 
+  <script type="module" src="../script/popup.js"></script> 
+
+--- (manifest.json) 
+ "background": {
+    "service_worker": "/src/script/background.js",
+    "type" : "module"    
+  },
+
+
+------------------- import in file ---------------------------------------
+import {getAllRadioStationsFromBase } from "../service/loadData.js"
