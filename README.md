@@ -41,7 +41,7 @@ https://youtu.be/o05VvyFG7Wk
 ```
 
 ## Short video intro:
-soon
+https://youtu.be/7qkbGSQM9zA
 
 ## Screenshots:
 ![1](https://github.com/byAbaddon/Web-Browsers-Extensions/assets/51271834/4cb881c1-fe2c-4f22-ae73-e6a279b90145)
