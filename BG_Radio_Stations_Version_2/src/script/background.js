@@ -71,7 +71,7 @@ function createNewWindow() {
     },
       function (newWindow) {
         popupWindowID = newWindow.id
-        chrome.windows.update(popupWindowID, { width: 300,  focused: true})
+        chrome.windows.update(popupWindowID, { width: 325,  focused: true})
         
       })
   })
