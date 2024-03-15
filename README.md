@@ -36,6 +36,7 @@ https://youtu.be/o05VvyFG7Wk
 ```
 ```diff
 - WARNING
+- In version_1
 - Play Audio in Background service worker not possible!
 - Background sound service is currently unavailable, in Manifest 3 - 14/02/2024
 ```
