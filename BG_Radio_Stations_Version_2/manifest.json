@@ -1,0 +1,63 @@
+{
+  "manifest_version": 3,
+  "name": "RadioBG",
+  "description": "Browser extension app.",
+  "version": "1.0",
+  "author": "by Abaddon",
+
+  "icons": {
+    "16": "/assets/images/icons/action/16.png",
+    "32": "/assets/images/icons/action/32.png",
+    "48": "/assets/images/icons/action/48.png",
+    "256": "/assets/images/icons/app/256.png"
+  },
+
+  "action": {
+    "default_title": "RadioBG",
+    "default_popup": "",
+    "default_position": "new_tab",
+    "default_icon": {
+      "16": "/assets/images/icons/action/16.png",
+      "32": "/assets/images/icons/action/32.png",
+      "48": "/assets/images/icons/action/48.png",
+      "128": "/assets/images/icons/action/128.png"
+    }
+
+    
+  },
+
+
+  "options_ui": {
+    "page": "/src/html/options.html",
+    "open_in_tab": false
+  },
+
+  "background": {
+    "service_worker": "/src/script/background.js"
+  },
+
+ 
+  
+
+  "host_permissions":  ["<all_urls>"],
+  "permissions": [
+    "declarativeNetRequest", "webRequest",
+    "alarms",
+    "activeTab",
+    "browsingData",
+    "clipboardWrite",
+    "offscreen",
+    "scripting",
+    "storage",
+    "sessions",
+    "tabs",
+    "tabCapture",
+    "windows"
+  ],
+
+  "minimum_chrome_version": "103",
+  "offline_enabled": true
+}
+
+
+
