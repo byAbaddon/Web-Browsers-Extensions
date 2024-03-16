@@ -21,6 +21,8 @@ chrome.runtime.onInstalled.addListener(() => {
 chrome.windows.onRemoved.addListener(function(windowId) {
   if (windowId == popupWindowID) {
     isPopupWindowOpen = false
+    chrome.action.setBadgeText({text: ''})
+    chrome.action.setBadgeBackgroundColor({ color: '#ffff01'})
   }
 })
 
