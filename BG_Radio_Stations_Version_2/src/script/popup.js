@@ -390,9 +390,11 @@ document.addEventListener('DOMContentLoaded', async function () {
 
   //-------badge on/off
   function badgeOnOff(isPlay=Boolean) {
-    const message = isPlay ? 'addBadge' : 'removeBadge'
+   try {
+   	const message = isPlay ? 'addBadge' : 'removeBadge'
     //---send message to background to update badge
     chrome.runtime.sendMessage({ action: message, data: '' })
+    } catch {console.log('Fail to send badge message') }
   }
  
 
