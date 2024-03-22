@@ -2,13 +2,16 @@
 //---------------------------------------GLOBAL VAR
 let audioURL = ''
 
+
 document.addEventListener('DOMContentLoaded', async function () {
   console.log('PopUp window load success....')
 
   //--- get data form locale storage
   const radioArray = await getDataFromStorage()
+  
   //--- add element with data to HTML
   addElementsToPopupHTML(radioArray)
+
 
   //--- get element form HTML
   const html = {
@@ -114,9 +117,8 @@ document.addEventListener('DOMContentLoaded', async function () {
         // Stop the current audio
         html.audioPlayer().pause()
 
-        //on/of Badge  hide
-        badgeOnOff(false)
         equalizer(false)
+        
         // Change img button Stop to Play
         stopButton.previousElementSibling.src = '../../assets/images/buttons/btnPlay.png'
 
@@ -151,7 +153,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         html.audioPlayer().src = audioSource
         html.audioPlayer().load()
        
-
+        
         // check is audio loaded success
         isAudioLoaded(html.audioPlayer(), audioMetaData, radioName, )  
         .then((loaded) => {
@@ -164,10 +166,12 @@ document.addEventListener('DOMContentLoaded', async function () {
     
             }
         })
-     
+
+          
       }
     })
-
+   
+   
     // play checked 
     btn.addEventListener('change', function (event) {
       //restore default on every click
@@ -198,8 +202,7 @@ document.addEventListener('DOMContentLoaded', async function () {
       if (html.audioPlayer().paused) {
         html.audioPlayer().src = audioSource
         html.audioPlayer().load()
-      
-
+    
         // check is audio loaded success
         isAudioLoaded(html.audioPlayer(), audioMetaData, radioName, )
         .then((loaded) => {
@@ -211,11 +214,12 @@ document.addEventListener('DOMContentLoaded', async function () {
             getCurrentAudioMetaData(audioMetaData, radioName)
           }
         })
-      
+     
+   
       }
 
     })
-
+      
   })
 
 
@@ -224,13 +228,12 @@ document.addEventListener('DOMContentLoaded', async function () {
 
  //---- check is audio loaded success
   function isAudioLoaded(audioElement, audioMetaData, radioName) {
-    return new Promise((resolve) => {
+    return new Promise((resolve) => {                                                                                          
         // success
       audioElement.addEventListener('loadeddata', function () {
               // add equalizer
               equalizer()
-              //on/of Badge
-              badgeOnOff(true)
+            
               //--- hide logo antenna
               document.querySelector('.antenna').style.display = 'none'
               //--- show notes animation
@@ -245,6 +248,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         audioElement.addEventListener('error', function() {        
           resolve(false)
         })
+                                                                                                       
     })
 }
 
@@ -387,15 +391,6 @@ document.addEventListener('DOMContentLoaded', async function () {
     }
   }
 
-
-  //-------badge on/off
-  function badgeOnOff(isPlay=Boolean) {
-   try {
-   	const message = isPlay ? 'addBadge' : 'removeBadge'
-    //---send message to background to update badge
-    chrome.runtime.sendMessage({ action: message, data: '' })
-    } catch {console.log('Fail to send badge message') }
-  }
  
 
   //---------add equalizer
@@ -404,6 +399,5 @@ document.addEventListener('DOMContentLoaded', async function () {
     container.style.display = isPlay ? 'flex' : 'none'
   }
   
-
-
 })
+  
