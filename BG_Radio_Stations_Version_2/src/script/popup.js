@@ -310,35 +310,47 @@ document.addEventListener('DOMContentLoaded', async function () {
   }
 
 
-  //---Web Audio API get current music data
+   //---Web Audio API get current music data
  async function getCurrentAudioMetaData(audioMetaData, radioName) {
    await fetch(audioMetaData)
       .then(response => response.text())
       .then(xsl => {
-        // console.log('full html code:', xsl)
+      // console.log('full html code:', xsl)
+        
         //--- XSL text  parser
         const parser = new DOMParser()
         const doc = parser.parseFromString(xsl, 'text/html')
         const elements = doc.querySelectorAll('[class^="streamdata"]')
+  
 
         const filteredElements = Array.from(elements).filter(x => x.textContent.includes(radioName))[0]
+   
+	 if (filteredElements.textContent.includes(radioName)) {
+  		const table = filteredElements.closest("table");
+  		const rows = Array.from(table.querySelectorAll("tr"));
 
-        if (filteredElements.textContent.includes(radioName)) {
-          const node = filteredElements.parentNode.parentNode.children
-          const streamTitle = node[1].children[1].textContent
-          const streamDescription = node[2].children[1].textContent
-          const contentType = node[3].children[1].textContent
-          const mountStart = node[4].children[1].textContent
-          const bitrate = node[5].children[1].textContent
-          const currentListeners = node[6].children[1].textContent
-          const peakListeners = node[7].children[1].textContent
-          const streamGenre = node[8].children[1].textContent
-          const currentSong = node[9].children[1].textContent
+  		const getRowValue = (label) => {
+   		 const row = rows.find(r => r.querySelector("td")?.textContent.trim() === label);
+    	return row ? row.querySelector(".streamdata")?.textContent.trim() : "";
+ 	 };
 
-          const metadata = { streamTitle, currentListeners, currentSong}
-          addMetaDataToPopupHTML(metadata)
+ 	 const streamTitle = getRowValue("Stream Title:");
+  	const streamDescription = getRowValue("Stream Description:");
+ 	 const contentType = getRowValue("Content Type:");
+  	const mountStart = getRowValue("Mount Start:");
+  	const bitrate = getRowValue("Bitrate:");
+  	const streamGenre = getRowValue("Stream Genre:");
+  	const currentSong = getRowValue("Current Song:");
+  	const currentListeners = getRowValue("Current Listeners:");
+  	const peakListeners = getRowValue("Peak Listeners:");
 
-        }
+  console.log("Metadata", streamTitle, currentListeners, currentSong);
+
+ 	 const metadata = { streamTitle, currentListeners, currentSong };
+ 	 addMetaDataToPopupHTML(metadata);
+}
+
+
       })
       .catch(error => {
         // console.error('Error unable to get meta data information!!!:', error)
@@ -349,7 +361,6 @@ document.addEventListener('DOMContentLoaded', async function () {
       })
 
   }
-
 
   //prototype custom function titleCase  
   String.prototype.titleCase = function () {
