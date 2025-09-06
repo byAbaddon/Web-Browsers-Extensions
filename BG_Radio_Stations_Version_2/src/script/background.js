@@ -1,12 +1,31 @@
 importScripts('../../assets/data/radioArr.js'); // this import: radioStations
 
+
+
 //---global var
 let isPopupWindowOpen = false
 let popupWindowID  = null
 
-  //---------- This runs ONE TIME ONLY (unless the user reinstalls your extension)
+//---------- This runs ONE TIME ONLY (unless the user reinstalls your extension)
 chrome.runtime.onInstalled.addListener(() => {
   console.log('Background start successfully.......................')
+
+
+  //---create new Window
+  chrome.action.onClicked.addListener(function (tab) {
+    if (!isPopupWindowOpen) {
+      createNewWindow()
+      isPopupWindowOpen = true
+    }
+  })
+
+//---check is popup window was killed
+chrome.windows.onRemoved.addListener(function(windowId) {
+  if (windowId == popupWindowID) {
+    isPopupWindowOpen = false
+  }
+})
+
 
 
   //---add key to locale storage
@@ -15,68 +34,55 @@ chrome.runtime.onInstalled.addListener(() => {
   })
 
 
-});
+  //---add badge
+  chrome.runtime.onMessage.addListener(async function (msg, sender, sendResponse) {
 
-//================================================================
-  //---create new Window
-  chrome.action.onClicked.addListener(function (tab) {
-    if (!isPopupWindowOpen) {
-      createNewWindow()
-      isPopupWindowOpen = true
-      //add badge
-      chrome.action.setBadgeText({ text: '♬' })
-      chrome.action.setBadgeBackgroundColor({ color: '#9688F1' })
+    if (msg.action == 'addBadge') {
+      await chrome.action.setBadgeText({text: '♬'})
+      await chrome.action.setBadgeBackgroundColor({ color: '#9688F1' })
+    }
+
+    if (msg.action == 'removeBadge') {
+      await chrome.action.setBadgeText({text: ''})
+      await chrome.action.setBadgeBackgroundColor({ color: '#ffff01'})
     }
   })
 
+})
 
 
+
+//------------------------------------add new window
 function createNewWindow() {
-  // check is already have popup.html  window
-  if (popupWindowID !== null) {
-    return
-  }
+  chrome.windows.getCurrent({
+    // populate: true
+  }, function (currentWindow) {
+    if (chrome.runtime.lastError || !currentWindow) return
 
-    chrome.windows.getCurrent({
-      // populate: true
-    }, function (currentWindow) {
-      if (chrome.runtime.lastError || !currentWindow) return
+    const topPosition = currentWindow.top
+    const rightPosition = currentWindow.left + currentWindow.width
+    chrome.windows.create({
+//  url: 'src/html/popup.html',    old method
+      url: chrome.runtime.getURL('src/html/popup.html'),  // new method
 
-      const topPosition = currentWindow.top
-      const rightPosition = currentWindow.left + currentWindow.width
+      type: "popup",
+      width: 350,
+      height: 725,
+      top: topPosition,
+      left: rightPosition - 30,
+      focused: true,
     
-      chrome.windows.create({
-        url: 'src/html/popup.html',
-        type: "popup",
-        width: 300,
-        height: 725,
-        top: topPosition,
-        left: rightPosition - 300,
-        focused: true,
-    
-      },
-        function (newWindow) {
-          popupWindowID = newWindow.id
-          chrome.windows.update(popupWindowID, { width: 325, focused: true })
+    },
+      function (newWindow) {
+        popupWindowID = newWindow.id
+        chrome.windows.update(popupWindowID, { width: 350,  focused: true})
         
-        })
-      
-    })
-  }
-
-
-
-//---check is popup window was killed
-  chrome.windows.onRemoved.addListener(function (windowId) {
-    if (windowId == popupWindowID) {
-      //reset data
-      isPopupWindowOpen = false
-      popupWindowID = null
-      //remove badge
-      chrome.action.setBadgeText({ text: '' })
-      chrome.action.setBadgeBackgroundColor({ color: '#ffff01' })
-    }
-
+      })
   })
+}
+
+
+
+
 
 
